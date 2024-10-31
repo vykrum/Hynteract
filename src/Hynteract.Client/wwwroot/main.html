@@ -14,11 +14,6 @@
   <div class="column">
     <section class="section">
       ${Body}
-
-      <div id="notification-area">
-        <div>${Error}</div>
-      </div>
-
       <template id="Home">
         <div class="content">
           <h1 class="title">Welcome to Bolero!</h1>
@@ -45,25 +40,18 @@
         </div>
       </template>
 
-      <template id="Counter">
-        <h1 class="title">A simple counter</h1>
-        <p>
-          <button onclick="${Decrement}" class="button">-</button>
-          <input type="number" id="counter" class="input" bind="${Value}">
-          <button onclick="${Increment}" class="button">+</button>
-        </p>
-        <p>
-          The counter's value is: ${Value}
-        </p>
-      </template>
-
-      <template id="ErrorNotification">
-        <div class="notification is-warning">
-          <button class="delete ${HideClass}" onclick="${Hide}"></button>
-          ${Text}
+      <template id="Draw">
+        <div class="container">
+            <div class="cube" id="cube">
+                <div class="face front">Front</div>
+                <div class="face back">Back</div>
+                <div class="face left">Left</div>
+                <div class="face right">Right</div>
+                <div class="face top">Top</div>
+                <div class="face bottom">Bottom</div>
+            </div>
         </div>
       </template>
-
     </section>
   </div>
 </div>
