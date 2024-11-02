@@ -1,6 +1,6 @@
 name: DeployToGitHubPages
 env:
-  PUBLISH_DIR: src/Hynteract.Client/wwwroot
+  PUBLISH_DIR: src/Hynteract.Client/bin/Release/net8.0/publish/wwwroot
 
 on:
   push:
@@ -27,9 +27,6 @@ jobs:
         with:
           html_path: ${{ env.PUBLISH_DIR }}/index.html
           base_href: /
-
-      - name: Create CNAME file
-        run: echo 'hywe.in' > ${{ env.PUBLISH_DIR }}/CNAME
 
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2
